@@ -9,13 +9,14 @@ public class StarPlayer : MonoBehaviour
     
     public TMP_Text timeText;
     
+    public GameMasterController gamemaster;
     // Update is called once per frame
     void Update()
     {
         starText.SetText("Stars: " + stars);
-        if (stars < 3)
+        if (stars < 3 && gamemaster.gameStarted == true)
         {
-            timeText.SetText("Time: " + Mathf.Round(Time.time));
+            timeText.SetText("Time: " + Mathf.Round(Time.time - gamemaster.startTime));
         }
       
 
