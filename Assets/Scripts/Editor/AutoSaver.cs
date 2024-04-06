@@ -7,7 +7,6 @@ public static class AutoSaver
 {
     static double s_TimeBetweenSaves = 60d;
     static double s_LastSaveTime;
-
     static AutoSaver()
     {
         EditorApplication.update += OnEditorUpdate;
@@ -16,7 +15,6 @@ public static class AutoSaver
     {
         if (EditorApplication.isPlaying)
             return;
-
         double timeSinceStartup = EditorApplication.timeSinceStartup;
         if (timeSinceStartup - s_LastSaveTime > s_TimeBetweenSaves)
         {
