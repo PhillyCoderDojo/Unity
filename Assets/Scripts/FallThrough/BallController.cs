@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 public class BallController : MonoBehaviour
@@ -21,6 +22,7 @@ public class BallController : MonoBehaviour
             enabled = false; // Disable the script if cameraTransform is not set
             return;
         }
+        
     }
 
     // FixedUpdate is called every fixed framerate frame
