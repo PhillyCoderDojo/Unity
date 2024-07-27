@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public LevelData[] levels;
+    public LevelObject[] levels;
     public Text levelText;
     public Text starsText;
     public Text messageText;
@@ -40,6 +41,18 @@ public class GameManager : MonoBehaviour
     {
         collectedStars++;
         UpdateUI();
+    }
+
+    public void ShowStarCollectedMessage()
+    {
+        messageText.text = "I got a star!";
+        StartCoroutine(ClearMessageAfterDelay(2f)); // Clear the message after 2 seconds
+    }
+
+    private IEnumerator ClearMessageAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        messageText.text = "";
     }
 
     public void CompleteLevel()
