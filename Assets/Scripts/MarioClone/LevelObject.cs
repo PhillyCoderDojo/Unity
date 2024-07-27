@@ -4,4 +4,5 @@ using UnityEngine;
 public class LevelObject : ScriptableObject
 {
     public int requiredStars;
+    public AudioClip backgroundMusic;
 }
