@@ -82,7 +82,4 @@ Follow these steps to deploy your Unity WebGL project using **GitHub Desktop** a
 
 
 
-```
-
-https://your-username.github.io/your-repo/
 
