@@ -76,9 +76,10 @@ Follow these steps to deploy your Unity WebGL project using **GitHub Desktop** a
 
    - Folder: `/docs`
 
-1. Click **Save**.
+4. Click **Save**.
+5. Refresh the page and click link to play your game!
 
-GitHub will build your site and host it at:
+
 
 
 ```
